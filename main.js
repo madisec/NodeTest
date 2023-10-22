@@ -14,26 +14,36 @@ app.get('/shop/notsafe', function (req, res) {
     res.send(`<h1>${product}</h1>`);
 })
 
-// Fuuz for amin pannel
-app.get('/support/admin', function (req, res) {
-    let usernameAdmin = req.query.username_admin
-    let passwordAdmin = req.query.password_Admin
-    if (usernameAdmin == "admin" && passwordAdmin == "75859") {
+// test for fix bug 
+app.get('/admin', function (req, res) {
+    var username = req.query.username;
+    var password = req.query.password;
+    if (username == "admin" && password == 12211) {
         res.status(200).json({
             data: admin,
             success: true
         });
-
-    } else if (usernameAdmin == "admin" && passwordAdmin != "75859") {
-        res.send("Password is false!!!!!!")
-        res.send.status(403);
-    } else if (usernameAdmin != "admin" && passwordAdmin == "75859") {
-        res.send("Username is false!!!!!");
-        res.send.status(403);
     } else {
-        res.send("Hi baybe, How are you?")
+        res.send("username and password is flase");
     }
+
 })
+// Fuuz for amin pannel
+// app.get('/support/admin', function (req, res) {
+//     let usernameAdmin = req.query.username_admin
+//     let passwordAdmin = req.query.password_Admin
+//     if (usernameAdmin == "admin" && passwordAdmin == "75859") {
+//         res.send("FLAG:456b7016a916a4b178dd72b947c152b7");
+
+//     } else if (usernameAdmin == "admin" && passwordAdmin != "75859") {
+//         res.status(200).send("Password is false!!!!!!")
+        
+//     } else if (usernameAdmin != "admin" && passwordAdmin == "75859") {
+//         res.status(200).send("Username is false!!!!!");
+//     } else {
+//         res.send("Hi baybe, How are you?")
+//     }
+// })
 
 // Open redirec test 
 // app.get('/blog', function (req, res) {

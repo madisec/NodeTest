@@ -28,22 +28,6 @@ app.get('/admin', function (req, res) {
     }
 
 })
-// Fuuz for amin pannel
-// app.get('/support/admin', function (req, res) {
-//     let usernameAdmin = req.query.username_admin
-//     let passwordAdmin = req.query.password_Admin
-//     if (usernameAdmin == "admin" && passwordAdmin == "75859") {
-//         res.send("FLAG:456b7016a916a4b178dd72b947c152b7");
-
-//     } else if (usernameAdmin == "admin" && passwordAdmin != "75859") {
-//         res.status(200).send("Password is false!!!!!!")
-        
-//     } else if (usernameAdmin != "admin" && passwordAdmin == "75859") {
-//         res.status(200).send("Username is false!!!!!");
-//     } else {
-//         res.send("Hi baybe, How are you?")
-//     }
-// })
 
 // Open redirec test 
 // app.get('/blog', function (req, res) {

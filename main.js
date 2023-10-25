@@ -30,16 +30,14 @@ app.get("/admin", function (req, res) {
   }
 });
 
-app.post('/', function (req, res) {
-  console.log(req.body)
-});
+
+
 
 // Open redirec test
-// app.get('/blog', function (req, res) {
-//     let redirect = req.query.direc
-//     res.writeHead(301, {location: "/"})
-
-// })
+app.get('/blog', function (req, res) {
+    let redirectURI = req.query.direct;
+    res.redirect(redirectURI)
+})
 
 // app port
 app.listen(2323, () => {

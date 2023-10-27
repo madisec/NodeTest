@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 
+
 app.use(express.urlencoded({ extended: false }));
 
 let admin = require("./admin");
@@ -30,16 +31,14 @@ app.get("/admin", function (req, res) {
   }
 });
 
-
-
-
 // Open redirec test
 app.get('/blog', function (req, res) {
     let redirectURI = req.query.direct;
     res.redirect(redirectURI)
 })
 
+
 // app port
-app.listen(2323, () => {
+app.listen(80, () => {
   console.log("App is running on port 2323");
 });

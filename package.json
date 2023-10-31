@@ -4,7 +4,8 @@
   "description": "A nodejs web app for test ",
   "main": "main.js",
   "scripts": {
-    "test": "console.log(21)"
+    "test": "console.log(21)",
+    "app": "nodemon app.js"
   },
   "repository": {
     "type": "git",

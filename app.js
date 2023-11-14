@@ -1,12 +1,12 @@
-const express = require('express');
-const app = express();
+const http = require('http');
+const port = 4343;
 
-app.get('/', function(req, res) {
-    res.send('App test 2')
-})
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<h1>hello, World!!</h1>');
+});
 
-
-
-app.listen(2323, () => {
-    console.log("Test app is running on port 2323");
+server.listen(port, () => {
+    console.log(`App is running on prot ${port}`);
 })
